@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColorEsfera : MonoBehaviour
+public class ColorEsfera1 : MonoBehaviour
 {
     GameObject go;
     public GameObject go1, go2;
@@ -35,7 +35,7 @@ public class ColorEsfera : MonoBehaviour
         color1 = go1.GetComponent<MeshRenderer>().material.color;
         color2 = go2.GetComponent<MeshRenderer>().material.color;
 
-        if(color1 == Color.white)
+        if (color1 == Color.white)
         {
             valor1 = true;
         }
@@ -53,7 +53,7 @@ public class ColorEsfera : MonoBehaviour
             valor2 = false;
         }
 
-        if(valor1 && valor2)
+        if (valor1 || valor2)
         {
             go.GetComponent<MeshRenderer>().material.color = Color.white;
         }
