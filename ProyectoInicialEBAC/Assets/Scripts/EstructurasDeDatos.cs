@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class EstructurasDeDatos : MonoBehaviour
@@ -35,6 +36,10 @@ public class EstructurasDeDatos : MonoBehaviour
         }
 
         listaNumeros.Sort(); //Se ordenan los numeros de la Lista
+
+        var listaOrdenada = listaNumeros.OrderBy(p => p).ToList();
+        var listaConValoresGrandes = listaNumeros.Where(p => p > 10).ToList();
+
 
         listaStrings.Add("Diego");
         listaStrings.Add("Sofia");
